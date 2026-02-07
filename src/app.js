@@ -6,7 +6,11 @@ const path = require("path");
 const notesModel = require("./models/notes.model");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PATCH", "DELETE"],
+}));
+
 app.use(express.static("./public"))
 
 app.get("/api/notes", async (req, res) => {
