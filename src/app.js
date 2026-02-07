@@ -20,7 +20,7 @@ app.get("/api/notes", async (req, res) => {
     notes,
   });
 });
-
+ 
 app.post("/api/notes" , async(req,res)=>{
     const {title,description} = req.body;
     
